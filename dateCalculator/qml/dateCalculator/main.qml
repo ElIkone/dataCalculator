@@ -5,19 +5,7 @@ Rectangle {
     height: 300
     property string days
 
-    function parseDate(str){
-        var t = str.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
-        if (t!==null) {
-            var d = + t[1], m = + t[2], y = + t[3]
-            var date = new Date(y,m-1,d)
-            if (date.getFullYear()===y && date.getMonth()===m-1){
-                date1 = date
-            }
-        }
-        return null
-    }
-
-    function test() {
+    function calculateDays() {
         var date1 = new Date(input.text)
         var date2 = new Date(input2.text)
         var timeDiff = Math.abs(date2.getTime() - date1.getTime());
@@ -49,7 +37,7 @@ Rectangle {
             left: parent.left; leftMargin: 100
         }
         onClicked: {
-            test()
+            calculateDays()
         }
     }
 
