@@ -14,7 +14,7 @@ Rectangle {
         anchors.centerIn: parent
         font.pixelSize: 14
         color: "#FFFFFF"
-        text: "Aprietame"
+        text: "Get Result"
     }
 
     MouseArea {

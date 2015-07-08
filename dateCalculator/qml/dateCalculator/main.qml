@@ -8,8 +8,8 @@ Rectangle {
     function calculateDays() {
         var date1 = new Date(input.text)
         var date2 = new Date(input2.text)
-        var timeDiff = Math.abs(date2.getTime() - date1.getTime());
-        var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+        var timeDiff = Math.abs(date2.getTime() - date1.getTime())
+        var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24))
         days = diffDays
     }
 
