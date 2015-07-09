@@ -5,9 +5,19 @@ Rectangle {
     height: 62
     color: "#3333FF"
     signal clicked
+    signal pressed
+    signal released
 
     function action() {
         clicked()
+    }
+
+    function press() {
+        pressed()
+    }
+
+    function releaseAction() {
+        released()
     }
 
     Text {
@@ -21,6 +31,12 @@ Rectangle {
         anchors.fill: parent
         onClicked: {
             action()
+        }
+        onPressed:  {
+            press()
+        }
+        onReleased: {
+            releaseAction()
         }
     }
 }

@@ -39,6 +39,12 @@ Rectangle {
         onClicked: {
             calculateDays()
         }
+        onPressed: {
+            button.color = "red"
+        }
+        onReleased:  {
+            button.color = "blue"
+        }
     }
 
     Label {
