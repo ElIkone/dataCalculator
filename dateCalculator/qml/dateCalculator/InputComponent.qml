@@ -4,14 +4,15 @@ Rectangle {
     property alias text: input.text
 
     width: 100
-    height: 50
-    border.color: "black"
+    height: 40
+    border.color: "#000000"
     border.width: 1
 
     TextInput {
         id: input
+
         anchors {
-            top: parent.top; topMargin: 20
+            top: parent.top; topMargin: 14
             left: parent.left; leftMargin: 10
             right: parent.right; rightMargin: 10
         }

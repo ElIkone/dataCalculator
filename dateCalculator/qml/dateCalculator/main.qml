@@ -40,10 +40,10 @@ Rectangle {
             calculateDays()
         }
         onPressed: {
-            button.color = "red"
+            button.color = "#C80000"
         }
         onReleased:  {
-            button.color = "blue"
+            button.color = "#3333FF"
         }
     }
 
