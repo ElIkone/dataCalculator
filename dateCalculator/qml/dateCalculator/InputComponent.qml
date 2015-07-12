@@ -2,6 +2,7 @@ import QtQuick 1.1
 
 Rectangle {
     property alias text: input.text
+    property alias focusInput: input.focus
 
     width: 100
     height: 40
@@ -20,5 +21,6 @@ Rectangle {
         width: parent.width
         height: parent.height
         maximumLength: 10
+        focus: true
     }
 }
