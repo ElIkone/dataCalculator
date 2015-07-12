@@ -2,7 +2,7 @@ import QtQuick 1.1
 
 Rectangle {
     width: 300
-    height: 300
+    height: 200
     property string days
 
     function calculateDays() {
@@ -13,11 +13,16 @@ Rectangle {
         days = diffDays
     }
 
+    Component.onCompleted: input.focusInput = true
+
     InputComponent {
         id: input
         anchors {
             top: parent.top; topMargin: 50
             left: parent.left; leftMargin: 20
+        }
+        Keys.onRightPressed: {
+            input2.focusInput = true
         }
     }
 
@@ -26,6 +31,9 @@ Rectangle {
         anchors {
             top: parent.top; topMargin: 50
             left: input.right; leftMargin: 50
+        }
+        Keys.onLeftPressed: {
+            input.focusInput = true
         }
     }
 
