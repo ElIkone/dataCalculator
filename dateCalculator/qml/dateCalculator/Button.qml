@@ -2,7 +2,7 @@ import QtQuick 1.1
 
 Rectangle {
     width: 100
-    height: 62
+    height: 40
     color: "#3333FF"
     border.color: "#000000"
     border.width: 1
