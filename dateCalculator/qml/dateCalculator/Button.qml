@@ -1,6 +1,8 @@
 import QtQuick 1.1
 
 Rectangle {
+    id: root
+
     width: 100
     height: 40
     color: "#3333FF"
@@ -9,6 +11,11 @@ Rectangle {
     signal clicked
     signal pressed
     signal released
+
+    BorderImage {
+        source: "highlight.png"
+        visible: root.activeFocus
+    }
 
     function action() {
         clicked()
